@@ -29,19 +29,19 @@ void loop() {
   float pf = pzem.pf();
 
   // Periksa apakah data valid
-    // if(isnan(voltage)){
-    //     Serial.println("Error reading voltage");
-    // } else if (isnan(current)) {
-    //     Serial.println("Error reading current");
-    // } else if (isnan(power)) {
-    //     Serial.println("Error reading power");
-    // } else if (isnan(energy)) {
-    //     Serial.println("Error reading energy");
-    // } else if (isnan(frequency)) {
-    //     Serial.println("Error reading frequency");
-    // } else if (isnan(pf)) {
-    //     Serial.println("Error reading power factor");
-    // } else {
+    if(isnan(voltage)){
+        Serial.println("Error reading voltage");
+    } else if (isnan(current)) {
+        Serial.println("Error reading current");
+    } else if (isnan(power)) {
+        Serial.println("Error reading power");
+    } else if (isnan(energy)) {
+        Serial.println("Error reading energy");
+    } else if (isnan(frequency)) {
+        Serial.println("Error reading frequency");
+    } else if (isnan(pf)) {
+        Serial.println("Error reading power factor");
+    } else {
 
         // Print the values to the Serial console
         Serial.print("Voltage: ");      Serial.print(voltage);      Serial.println("V");
@@ -50,7 +50,7 @@ void loop() {
         Serial.print("Energy: ");       Serial.print(energy,3);     Serial.println("kWh");
         Serial.print("Frequency: ");    Serial.print(frequency, 1); Serial.println("Hz");
         Serial.print("PF: ")r;           Serial.println(pf);
-    // }
+    }
 
     Serial.println();
     delay(2000);
